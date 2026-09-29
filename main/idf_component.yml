@@ -1,0 +1,17 @@
+## IDF Component Manager Manifest File
+#
+# Pruned to only what main/zectrix-s3-epaper-4.2 actually uses. The original
+# upstream manifest carried driver packages for ~15 other boards' LCD/touch
+# panels, audio codecs, and modems — none referenced anywhere in this
+# project's source, and several broke against IDF v6.0.1's API (esp-sr,
+# esp_lcd_nv3023). Re-add a specific package here if you add hardware that
+# needs it.
+dependencies:
+  lvgl/lvgl: ~9.3.0
+  esp_lvgl_port: ~2.6.0
+  espressif/button: ~4.1.3
+  espressif/esp_mmap_assets: '>=1.2'
+
+  ## Required IDF version
+  idf:
+    version: '>=5.4.0'

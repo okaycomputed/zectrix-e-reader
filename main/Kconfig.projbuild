@@ -1,0 +1,13 @@
+menu "Xiaozhi Assistant"
+
+config BOARD_TYPE_ZECTRIX_S3_EPAPER_4_2
+    bool "zectrix-s3-epaper-4.2 custom firmware"
+    default y
+    depends on IDF_TARGET_ESP32S3
+    help
+        Stripped-down firmware for the zectrix-s3-epaper-4.2 board: hardware
+        bring-up only (power, e-paper, buttons, RTC, NFC), with the original
+        factory-test UI and AI-assistant audio pipeline removed. Build your
+        own interface starting from display/pages/blank_page.cc.
+
+endmenu
